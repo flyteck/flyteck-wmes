@@ -1,0 +1,291 @@
+* {
+	box-sizing: border-box;
+}
+
+:root {
+    --black: #150D0F;
+    --dark: #2C3535;
+    --mid: #3D4C4C;
+    --light: #708181;
+    --white: #f4f3ec;
+    --accent: #458686;
+    --accent-bright: #58b29b;
+
+    --text: #2C3535;
+}
+
+.dark-mode {
+    --black: #150D0F;
+    --dark: #2C3535;
+    --mid: #f4f3ec;
+    --light: #97aeae;
+    --white: #3D4C4C;
+    --accent: #87cfcf;
+    --accent-bright: #88ecd3;
+
+    --text: #f4f3ec;
+}
+
+body {
+	background: var(--dark);
+	margin: 0;
+	padding: 0;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	min-height: 100vh;
+	color: var(--text);
+	font-family: 'Mooli';
+	font-size: 90%;
+}
+
+img {
+	max-width: 100%;
+	max-height: 100%;
+}
+
+a {
+	color: var(--accent);
+	text-decoration: none;
+	transition: 200ms ease;
+}
+
+a:hover, a:focus {
+	color: var(--accent-bright);
+}
+
+h2, h3 {
+	font-family: 'Alumni Sans SC';
+}
+
+.center {
+	text-align: center;
+}
+
+#back-button {
+	position: absolute;
+	left: 0;
+	top: 0;
+	margin: 10px;
+	height: 30px;
+	width: 30px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.wrapper {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+button, .button {
+	background: var(--light);
+	padding: 4px 6px;
+	border: 1px solid black;
+	font-size: inherit;
+	font-family: inherit;
+	text-align: center;
+	margin: 2px 4px;
+	border-radius: 4px;
+	cursor: pointer;
+	color: var(--white);
+	transition: 200ms ease;
+}
+
+button:hover, .button:hover, button:focus, .button:focus {
+	background: var(--mid);
+	color: var(--white);
+}
+
+.button.disabled, button.disabled {
+	opacity: 0.5;
+	pointer-events: none;
+}
+
+.tab-button {
+	background: var(--light);
+	border-bottom: none;
+	border-radius: 4px 4px 0 0;
+	padding: 4px 12px 2px;
+	margin: 8px 2px 4.3px;
+	position: relative;
+}
+
+#tab-one-button {
+	margin-left: 12px;
+}
+
+.tab-button.open {
+	background: var(--white);
+	color: var(--mid);
+	z-index: 10;
+}
+
+#main-image {
+	flex-grow: 1;
+	height: 80vh;
+	margin: 40px;
+	text-align: center;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+}
+
+#main-column {
+	height: 80vh;
+	overflow: auto;
+	flex: 4;
+	padding: 0 36px 36px;
+	background: var(--white);
+	color: var(--text);
+	margin: 0 40px;
+	border-radius: 4px;
+	border: 1px outset #617777;
+	border-bottom: 2px outset #617777;
+}
+
+h1 {
+	font-family: 'Sedgwick Ave Display';
+	margin: 0 0 4px;
+	font-size: 3em;
+}
+
+.sticky-block {
+	top: 0;
+	padding: 20px 0 0;
+	position: sticky;
+	background: var(--white);
+	z-index: 10;
+}
+
+.sticky-block hr {
+	border:none;
+	border-top: 1px solid #000000;
+	opacity: 0.8;
+}
+
+.flex-column {
+	display: flex;
+	flex-direction: column;
+}
+
+.flex-row {
+	display: flex;
+}
+
+.herd-wrap {
+	display: flex;
+	flex-wrap: wrap;
+	margin: 10px 0;
+	align-items: center;
+	padding: 10px;
+	flex: 1 1 auto;
+	max-width: 260px;
+}
+
+#index #tab-one {
+	margin-top: 10px;
+	width: fit-content;
+    flex-wrap: wrap;
+}
+
+#index #tab-two {
+	padding: 30px 0 0;
+	margin: auto;
+	flex-wrap: wrap;
+	gap: 5px;
+	align-items: center;
+	justify-content: center;
+}
+
+.herd-wrap .flex-column {
+	margin: 10px;
+	align-items: center;
+	justify-content: center;
+}
+
+.herd-wrap h2 { 
+	width: 100%;
+	margin: 0;
+	text-align: center;
+	font-size: 2em;
+}
+
+.herd-wrap button, .herd-wrap .button {
+	width: 130px;
+}
+
+.herd-collapse {
+	display: none;
+	transition: 400ms ease;
+	width: 100%;
+	max-height: 0;
+	opacity: 0;
+}
+
+.herd-collapse.open {
+	display: flex;
+	max-height: 600px;
+	opacity: 1;
+}
+/** tooltip **/
+
+.tooltip {
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+}
+
+.tooltip:hover .tooltiptext {
+	opacity: 1;
+	pointer-events: auto;
+}
+
+/* Tooltip text */
+.tooltiptext {
+	width: fit-content;
+  	min-width: 60px;
+  	background-color: var(--mid);
+  	color: var(--white);
+  	text-align: center;
+  	padding: 5px 10px;
+  	border-radius: 6px;
+  	position: absolute;
+  	z-index: 1;
+  	bottom: 100%;
+  	left: 50%;
+  	transform: translateX(-50%);
+  	opacity: 0;
+  	transition: 200ms ease;
+  	pointer-events: none;
+}
+
+.tooltiptext:after {
+	content: " ";
+	position: absolute;
+	top: 100%; /* At the bottom of the tooltip */
+	left: 50%;
+	margin-left: -5px;
+	border-width: 5px;
+	border-style: solid;
+	border-color: var(--mid) transparent transparent transparent;
+}
+
+/** Tab Stuff **/
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+.tab {
+	display: none;
+	animation: fadeIn 300ms ease-in-out forwards;
+}
+
+.tab.open {
+	display: flex;
+}
