@@ -289,3 +289,23 @@ h1 {
 .tab.open {
 	display: flex;
 }
+
+/** Media Queries **/
+
+@media (max-width:1000px) {
+	.wrapper {
+		flex-direction: column;
+		width: 100%;
+		min-height: 100vh;
+	}
+
+	#main-image {
+		display: none;
+	}
+}
+
+@media (max-width:800px) {
+	#main-column {
+		margin: 10px;
+	}
+}
