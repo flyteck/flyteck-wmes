@@ -1,6 +1,6 @@
 //for prev/next/nav links, get all WME names
 
-wmeList = ["rocket", "honolulu", "bruno", "ladybird", "mocha", "classical", "soliloquy", "zachariah", "tia", "renee", "ciel", "vatra", "ariana", "estella", "adonis", "romulus", "viski", "saline", "godiva", "aleus", "fluffy", "cain", "bailey", "hazel", "snickerdoodle", "caspian", "terracotta", "alsike", "douglas", "phoebe", "jasper", "dew", "polaris", "yorkshire", "acacia", "quincy", "argent", "gnash", "affogato", "solstice", "cheshire", "welsummer" ];
+wmeList = ["rocket", "honolulu", "bruno", "ladybird", "mocha", "classical", "soliloquy", "zachariah", "tia", "renee", "ciel", "vatra", "ariana", "estella", "adonis", "romulus", "viski", "saline", "godiva", "aleus", "fluffy", "cain", "bailey", "hazel", "snickerdoodle", "caspian", "terracotta", "alsike", "douglas", "phoebe", "jasper", "dew", "polaris", "yorkshire", "acacia", "quincy", "argent", "gnash", "affogato", "solstice", "cheshire", "welsummer", "argyle" ];
 var currentWME = document.getElementById("name").innerHTML.toLowerCase();
 var prevWME = undefined;
 var nextWME = undefined;
@@ -34,12 +34,13 @@ prevButton.href = wmeList[prevWME] + ".html";
 nextButton.href = wmeList[nextWME] + ".html";
 
 
-//if prev is less than 0, disable + if next is more than wmeList length, disable
-if (prevWME < 0) {
+//disable if we're on first or last
+if (wmeList[prevWME] == undefined) {
 	prevButton.classList.add("disabled");
 	prevButton.setAttribute("tabindex","-1");
 }
-if (nextWME > wmeList.length) {
+
+if (wmeList[nextWME] == undefined) {
 	nextButton.classList.add("disabled");
 	nextButton.setAttribute("tabindex","-1");
 }
