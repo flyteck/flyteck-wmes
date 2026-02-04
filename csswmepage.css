@@ -323,8 +323,23 @@ ul .number b {
 		padding: 10px;
 	}
 
+	#foal-gallery .flex-row {
+		flex-direction: row;
+		align-items: center;
+		justify-content: center;
+	}
+
+	#foal-gallery a {
+		width: 300px;
+		max-width: 100vw;
+	}
+
 	.flex-row {
 		flex-direction: column;
+	}
+
+	.heritage {
+		padding: 20px 0;
 	}
 
 	.heritage .flex-row {
@@ -367,6 +382,16 @@ ul .number b {
 
 	.display-image ~ ul {
 		text-align: center;
+	}
+}
+
+@media (max-width:480px) {
+	.heritage .flex-row {
+		zoom: 90%;
+	}
+
+	.heritage .flex-column {
+		margin: 0 -10px;
 	}
 }
 
