@@ -54,3 +54,43 @@ function tabToggle() {
 	document.getElementById(newTab).classList.add("open");
 	event.target.classList.add("open");
 }
+
+//////
+
+//on click, get the hidden text, copy to clipboard, and then have a little "copied" indicator pop up
+
+
+//get the form buttons in the whole page
+const formButtons = document.getElementsByClassName("form-button");
+
+//add listeners to any tab buttons
+for (i = 0; i < formButtons.length; i++) {
+	formButtons[i].addEventListener("click", formCopy)
+}
+
+function formCopy() {
+	//grab flexible vars
+	var formContainer = event.target.parentElement;
+	var form = formContainer.querySelector(".form-content");
+
+	//copy text in innerhtml to clipboard
+	navigator.clipboard.writeText(form.textContent);
+
+	//pop up a "copied" notice
+	var copied = formContainer.querySelector(".copied-tooltip");
+	copied.style.display = "block";
+
+	//fade it in,
+	setTimeout(() => {
+	  copied.style.opacity = "1";
+	}, 10);
+
+	//then fade it out and hide it
+	setTimeout(() => {
+	  copied.style.opacity = "0";
+	}, 1200);
+
+	setTimeout(() => {
+	  copied.style.display = "none";
+	}, 1400);
+}
