@@ -55,10 +55,9 @@ function tabToggle() {
 	event.target.classList.add("open");
 }
 
-//////
+////////////////////////
 
-//on click, get the hidden text, copy to clipboard, and then have a little "copied" indicator pop up
-
+//auto copy forms for breeding slots
 
 //get the form buttons in the whole page
 const formButtons = document.getElementsByClassName("form-button");
@@ -94,3 +93,5 @@ function formCopy() {
 	  copied.style.display = "none";
 	}, 1400);
 }
+
+

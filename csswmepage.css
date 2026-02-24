@@ -88,6 +88,10 @@ ul, .heritage {
     position: relative;
 }
 
+#slots-used {
+	display: none;
+}
+
 li {
 	padding: 0;
 	margin: 0;

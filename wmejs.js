@@ -45,4 +45,22 @@ if (wmeList[nextWME] == undefined) {
 	nextButton.setAttribute("tabindex","-1");
 }
 
-//set the urls based on the value in WMEList at that i
+
+////////////////////////
+
+//js to auto update breeding slot counts
+
+//only run this if we have a slot total (to prevent errors on wmes with slots permanently closed)
+if (document.getElementById("slots-total") != null) {
+	//make up all our variables
+	var slotsUsed = document.getElementById("slots-used").innerHTML;
+	var creationDate = document.getElementById("creation-date").innerHTML;
+	var currentYear = new Date().getFullYear();
+	//calculate total slots, and total remaining slots
+	var slotsTotal = parseInt(10) + parseInt(currentYear) - parseInt(creationDate);
+	var slotsCurrent = slotsTotal - parseInt(slotsUsed);
+
+	//set the current slots and total slots appropriately
+	document.getElementById("slots-total").innerHTML = slotsTotal;
+	document.getElementById("slots-current").innerHTML = slotsCurrent;
+}
