@@ -1,5 +1,7 @@
 * {
 	box-sizing: border-box;
+	scrollbar-color: var(--light) transparent;
+  	scrollbar-width: thin;
 }
 
 :root {

@@ -68,18 +68,18 @@ img.icon-image {
 	width: auto;
 	margin: auto;
 	max-width: 300px;
+	border: 16px solid transparent;
 }
 
 ul, .heritage {
 	padding: 20px;
-	margin: 0;
+	margin: 10px;
 	list-style: none;
 	font-family: 'Alumni Sans SC';
 	font-size: 1.45em;
 	border: 1px solid var(--light);
 	border-top: 2px solid var(--light);
 	border-bottom: 2px solid var(--light);
-	margin: 10px;
 	border-radius: 8px;
 	display: flex;
     flex-direction: column;
@@ -87,6 +87,7 @@ ul, .heritage {
     flex-grow: 1;
     position: relative;
 }
+
 
 #slots-used {
 	display: none;
