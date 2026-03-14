@@ -1,6 +1,6 @@
 //for prev/next/nav links, get all WME names
 
-wmeList = ["rocket", "honolulu", "bruno", "ladybird", "mocha", "classical", "soliloquy", "zachariah", "tia", "renee", "ciel", "vatra", "ariana", "estella", "adonis", "romulus", "viski", "saline", "godiva", "aleus", "fluffy", "cain", "bailey", "hazel", "snickerdoodle", "caspian", "terracotta", "alsike", "douglas", "phoebe", "jasper", "dew", "polaris", "yorkshire", "acacia", "quincy", "argent", "gnash", "affogato", "solstice", "cheshire", "welsummer", "argyle" ];
+wmeList = ["rocket", "honolulu", "bruno", "ladybird", "mocha", "classical", "soliloquy", "zachariah", "tia", "renee", "ciel", "vatra", "ariana", "estella", "adonis", "romulus", "viski", "saline", "godiva", "aleus", "fluffy", "cain", "bailey", "hazel", "snickerdoodle", "caspian", "terracotta", "alsike", "douglas", "phoebe", "jasper", "dew", "polaris", "yorkshire", "acacia", "quincy", "argent", "gnash", "affogato", "solstice", "cheshire", "welsummer", "argyle", "ophelia" ];
 var currentWME = document.getElementById("name").innerHTML.toLowerCase();
 var prevWME = undefined;
 var nextWME = undefined;
