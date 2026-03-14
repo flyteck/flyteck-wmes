@@ -29,6 +29,10 @@
 	align-items: center;
 }
 
+#name {
+	font-weight: 300;
+}
+
 .text-area {
 	padding: 10px;
     line-height: 1.5;
