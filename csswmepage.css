@@ -315,6 +315,42 @@ ul .number b {
 	color:#fb3636;
 }
 
+/** Herd Pages **/
+
+
+#relation-1, #relation-2 {
+	flex-grow: 1;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+}
+
+#members {
+	flex-wrap: wrap;
+	align-items: center;
+	justify-content: center;
+}
+
+#relation-1 select, #relation-2 select {
+	margin: 10px;
+	padding: 5px;
+    border-radius: 6px;
+}
+
+#description-box {
+	display: block!important;
+}
+
+#description-box .border-box div {
+	display: none;
+}
+
+#description-box .border-box div.active {
+	display: block;
+}
+
+
 /** Media Queries **/
 
 
