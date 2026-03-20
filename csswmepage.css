@@ -4,7 +4,7 @@
 	margin: 60px;
 	border-radius: 6px;
 	color: var(--text);
-	width: 860px;
+	width: 910px;
 	max-width: 80vw;
 	border: 1.5px outset #617777;
 	border-bottom: 4px outset #617777;
@@ -23,6 +23,12 @@
     border-top: 3px dashed var(--light);
     height: 1px;
     opacity: 0.6;
+}
+
+hr.simple {
+	margin: 10px 0;
+	border-top: 1px solid var(--light);
+	opacity: 0.25;
 }
 
 .container .flex-row {
