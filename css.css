@@ -187,7 +187,8 @@ h1 {
 	align-items: center;
 	padding: 10px;
 	flex: 1 1 auto;
-	max-width: 260px;
+	width: 50%;
+	max-width:300px;
 }
 
 #index #tab-one {
@@ -209,17 +210,24 @@ h1 {
 	margin: 10px;
 	align-items: center;
 	justify-content: center;
+	max-width: calc(100% - 70px);
+	flex-grow: 1;
 }
 
 .herd-wrap h2 { 
 	width: 100%;
-	margin: 0;
-	text-align: center;
-	font-size: 2em;
+    margin: 0;
+    text-align: center;
+    font-size: 2em;
+    line-height: 0.8;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .herd-wrap button, .herd-wrap .button {
 	width: 130px;
+	margin: 10px auto;
 }
 
 .herd-collapse {
@@ -380,7 +388,7 @@ h1 {
 	border-color: var(--mid) transparent transparent transparent;
 }
 
-/** Media Queries **/
+/********************* Media Queries *********************/
 
 @media (max-width:1000px) {
 	.wrapper {
@@ -397,5 +405,9 @@ h1 {
 @media (max-width:800px) {
 	#main-column {
 		margin: 10px;
+	}
+
+	.herd-wrap h2 { 
+	    height: 50px;
 	}
 }
