@@ -1,3 +1,73 @@
+/////////////Main Nav
+//for prev/next/nav links, get all herd names
+
+herdList = ["rocketherd", "aleusherd", "caspianherd", "bachelorherd", "domesticherd", "lonerherd" ];
+var currentherd = document.getElementById("herdname").innerHTML.toLowerCase();
+var prevherd = undefined;
+var nextherd = undefined;
+
+//get the nav menu
+var dropwdown = document.getElementById("nav-dropdown");
+//iterature through the list, and add everyone to the dropdown
+for (i = 0; i < herdList.length; i++) {
+	if (currentherd != herdList[i]) {
+		//don't add if it's the current herd
+		dropwdown.innerHTML += '<option' + ' id=' + herdList[i] + ' value="' + herdList[i] + '">' + herdList[i] + '</option>';
+	} else {
+		//set prev and next based on where the match is in the list
+		prevherd = parseInt([i]) - parseInt("1");
+		nextherd = parseInt([i]) + parseInt("1");
+	}
+}
+
+//add event listener on change
+dropwdown.addEventListener("change", jumpPage)
+function jumpPage() {
+	//and jump to the selected option's page
+	window.location.href = dropwdown.value + ".html";
+}
+
+//grab our next and previous buttons
+var prevButton = document.getElementById("prev");
+var nextButton = document.getElementById("next");
+
+prevButton.href = herdList[prevherd] + ".html";
+nextButton.href = herdList[nextherd] + ".html";
+
+
+//disable if we're on first or last
+if (herdList[prevherd] == undefined) {
+	prevButton.classList.add("disabled");
+	prevButton.setAttribute("tabindex","-1");
+}
+
+if (herdList[nextherd] == undefined) {
+	nextButton.classList.add("disabled");
+	nextButton.setAttribute("tabindex","-1");
+}
+
+///uhhhh we need to fix the names after the fact ???
+if (document.getElementById("rocketherd") != null) {
+	document.getElementById("rocketherd").innerHTML = "The Foothills Herd";
+}
+if (document.getElementById("caspianherd") != null) {
+	document.getElementById("caspianherd").innerHTML = "The Ocean's Embrace Herd";
+}
+if (document.getElementById("aleusherd") != null) {
+	document.getElementById("aleusherd").innerHTML = "High Mountain Herd";
+}
+if (document.getElementById("bachelorherd") != null) {
+	document.getElementById("bachelorherd").innerHTML = "Bachelor Herd";
+}
+if (document.getElementById("domesticherd") != null) {
+	document.getElementById("domesticherd").innerHTML = "Wintergreen Stables";
+}
+if (document.getElementById("lonerherd") != null) {
+	document.getElementById("lonerherd").innerHTML = "Loners";
+}
+
+
+/////////////Relationships
 //Populate dropdown menus with names of WMEs
 
 //get members box, and all links inside (each member)
@@ -59,7 +129,6 @@ function changeWME() {
 	//find the current pairing, and make it show their box
 	if (descriptionBox.classList.length == 2) {
 		//check if there's a div in descriptions with the correct pair of names
-		console.log(descriptionBox.classList)
 		var currentPair = descriptionBox.querySelector("." + descriptionBox.classList[0] + "." + descriptionBox.classList[1]);
 
 		if (currentPair != null) {
@@ -73,53 +142,17 @@ function changeWME() {
 		}
 	}
 
-	//switch the image to the correct WME (this is a bit cumbersome but it DOES work)
-	wmeImage.id = wmeChosen;
+	//switch the image to the correct WME
+	//go through members
+	for (i = 0; i < members.length; i++) {
+		//if the name matches the wme chosen
+		if (members[i].querySelector(".name").innerHTML == wmeChosen) {
+			//grab the image in that box
+			var imageURL = members[i].querySelector("img").src;
+			//and set the SRC of the image below
+			wmeImage.src = imageURL
+		}
+	}
 
-	if (wmeImage.id == "Rocket") {
-		wmeImage.src = "https://flyteck.cfw.me/files/wme/wmehssmrocket.png"
-	}
-	if (wmeImage.id == "Honolulu") {
-		wmeImage.src = "https://flyteck.cfw.me/files/wme/wmehssmhana.png"
-	}
-	if (wmeImage.id == "Soliloquy") {
-		wmeImage.src = "https://flyteck.cfw.me/files/wme/wmehssmsoliloquy.png"
-	}
-	if (wmeImage.id == "Bruno") {
-		wmeImage.src = "https://flyteck.cfw.me/files/wme/wmehssmbruno.png"
-	}
-	if (wmeImage.id == "Ladybird") {
-		wmeImage.src = "https://flyteck.cfw.me/files/wme/wmehssmlady.png"
-	}
-	if (wmeImage.id == "Mocha") {
-		wmeImage.src = "https://flyteck.cfw.me/files/wme/wmehssmmocha.png"
-	}
-	if (wmeImage.id == "Classical") {
-		wmeImage.src = "https://flyteck.cfw.me/files/wme/wmehssmclassical.png"
-	}
-	if (wmeImage.id == "Zachariah") {
-		wmeImage.src = "https://flyteck.cfw.me/files/wme/wmehssmzach.png"
-	}
-	if (wmeImage.id == "Tia") {
-		wmeImage.src = "https://flyteck.cfw.me/files/wme/wmehssmtia.png"
-	}
-	if (wmeImage.id == "Renee") {
-		wmeImage.src = "https://flyteck.cfw.me/files/wme/wmehssmrenee.png"
-	}
-	if (wmeImage.id == "Ciel") {
-		wmeImage.src = "https://flyteck.cfw.me/files/wme/wmehssmciel.png"
-	}
-	if (wmeImage.id == "Vatra") {
-		wmeImage.src = "https://flyteck.cfw.me/files/wme/wmehssmvatra.png"
-	}
-	if (wmeImage.id == "Cain") {
-		wmeImage.src = "https://flyteck.cfw.me/files/wme/wmehssmcain.png"
-	}
-	if (wmeImage.id == "Estella") {
-		wmeImage.src = "https://flyteck.cfw.me/files/wme/wmehssmestella.png"
-	}
-	if (wmeImage.id == "Adonis") {
-		wmeImage.src = "https://flyteck.cfw.me/files/wme/wmehssmadonis.png"
-	}
 
 }

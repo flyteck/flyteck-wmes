@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<head>
+  <meta content="width=device-width, initial-scale=1" name="viewport" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
+
+  <link rel="stylesheet" href="../css.css">
+  <link rel="stylesheet" href="../csswmepage.css">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Alumni+Sans+SC:ital,wght@0,100..900;1,100..900&family=Mooli&family=Sedgwick+Ave+Display&display=swap" rel="stylesheet">
+
+  <link rel="icon" href="../wmesiteicon.png" type="image/png">
+
+	<title>Flyteck's WMEs</title>
+</head>
+
+<body class="dark-mode">
+
+<div class="wrapper">
+  <a href="../index.html" class="button" id="back-button"><i class="fa-solid fa-angle-left"></i></a>
+
+  <div class="flex-column container">
+    <h1><span id="name">Ocean's Embrace Herd</span></h1>
+    <span id="herdname">caspianherd</span>
+
+    <div class="flex-row" id="page-nav">
+      <select name="navigation" id="nav-dropdown">
+        <option value="">Jump to another herd</option>
+      </select>
+      <div class="flex-row" style="justify-content: space-between;">
+        <a class="button" id="prev"><i class="fa-solid fa-angle-left"></i>Prev</a>
+        <a class="button" id="next">Next<i class="fa-solid fa-angle-right"></i></a>
+      </div>
+    </div>
+
+    <hr style="margin-top:20px">
+    <div class="area-title">Love by the sea</div>
+
+    <div style="border-radius: 4px; background: #c02929;color: white;padding: 5px 10px;text-align: center;">This page is a wip!!</div>
+
+    <div style="height: 160px; background: seagreen; margin: 10px; border-radius: 4px;"></div>
+
+    <div class="flex-row border-box" style="flex-wrap: wrap;">
+      <h3 class="subtitle">About</h3>
+      The Ocean's Embrace herd functions largely as a polycule - Caspian is the leader, and romantically engaged with all members, some of which are engaged with one another as well.
+    </div>
+
+    <div class="flex-row border-box" id="members">
+        <h3 class="subtitle">Members</h3>
+        <a href="../wmes/caspian.html" class="tooltip"><img src="https://flyteck.cfw.me/files/wme/wmehssmcaspian.png"><span class="tooltiptext name">Caspian</span></a>
+        <a href="../wmes/phoebe.html" class="tooltip"><img src="https://flyteck.cfw.me/files/wme/wmehssmphoebe.png"><span class="tooltiptext name">Phoebe</span></a>
+        <a href="../wmes/ophelia.html" class="tooltip"><img src="https://flyteck.github.io/flyteck-wme-storage/img/art/ophelia/WMEHSOphelia.png"><span class="tooltiptext name">Ophelia</span></a>
+    </div>
+
+    <div class="border-box" style="flex-wrap: wrap;">
+      <h3 class="subtitle">Roles</h3>
+      <b>Lead Stallion ⋆</b> Capsian || <b>Lead Mare ⋆</b> Phoebe
+    </div>
+
+    <div class="flex-row border-box" style="flex-wrap: wrap;">
+      <h3 class="subtitle">Terrain</h3>
+      <div><b>Location Reference ⋆</b> <a href="https://en.wikipedia.org/wiki/San_Josef_Bay" target="_blank">San Josef Bay, Vancouver</a></div>
+      <hr class="simple">
+      The Ocean's Embrace herd lives along a cool, temperate, white sand beach; littered with rocky outcroppings and evergreen trees. The area is often overcast and gusty. The herd survives on small outcroppings of tough grass and lichen, as well as seaweed that washes up on the beaches.
+    </div>
+
+    <div class="flex-column border-box center" style="flex-wrap: wrap;">
+      <h3 class="subtitle">Herd Dynamics</h3>
+
+      <div class="flex-row">
+        <div id="relation-1">
+          <img src="wmehsdefault.png">
+          <select name="wme select" id="dropdown-1">
+            <option value="">Choose WME</option>
+          </select>
+        </div>
+         <div id="relation-2">
+           <img src="wmehsdefault.png">
+           <select name="wme select" id="dropdown-2">
+            <option value="">Choose WME</option>
+          </select>
+         </div>
+      </div>
+      <div id="description-box">
+        <div class="border-box">
+          <div class="active">Choose two WMEs to read about their relationship!</div>
+          
+          <div class="Caspian Phoebe">
+            <div><b>Relationship ⋆</b> Partners</div>
+            <hr class="simple">
+            Phoebe is Caspian's right hand mare. They're romantically entwined, but she's also his go to for advice and support. They have mutual respect for one another's sharp wits (and good looks).
+          </div>
+          <div class="Caspian Ophelia">
+            <div><b>Relationship ⋆</b> Partners</div>
+            Ophelia was drawn to Caspian's confidence and flashy attitude. She enjoys sharing gossip with him, and being fawned over.
+            <hr class="simple">
+          </div>
+
+          <div class="Phoebe Ophelia">
+            <div><b>Relationship ⋆</b> Partners</div>
+            <hr class="simple">
+            Phoebe always has something clever to say - it keeps Ophelia very engaged, and Phoebe loves listening to her tall tales.
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+
+
+</div>
+
+<script src="herdjs.js"></script>
+</body>
+
+</html>
