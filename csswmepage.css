@@ -323,6 +323,9 @@ ul .number b {
 
 /** Herd Pages **/
 
+#herdname {
+	display: none;
+}
 
 #relation-1, #relation-2 {
 	flex-grow: 1;
@@ -348,12 +351,16 @@ ul .number b {
 	display: block!important;
 }
 
-#description-box .border-box div {
+#description-box .border-box > div {
 	display: none;
 }
 
 #description-box .border-box div.active {
 	display: block;
+}
+
+.loners a {
+	flex: 0 0 auto;
 }
 
 
