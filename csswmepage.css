@@ -339,6 +339,11 @@ ul .number b {
 	flex-wrap: wrap;
 	align-items: center;
 	justify-content: center;
+	flex-direction: row;
+}
+
+.flex-row:has(#relation-2) {
+	flex-direction: row;
 }
 
 #relation-1 select, #relation-2 select {
