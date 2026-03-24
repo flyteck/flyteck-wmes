@@ -336,6 +336,12 @@ ul .number b {
 	background-size: cover;
 }
 
+#rocket-banner {
+	background-image: url(herdpicaleus.png);
+	background-position: center;
+	background-size: cover;
+}
+
 #herdname {
 	display: none;
 }
