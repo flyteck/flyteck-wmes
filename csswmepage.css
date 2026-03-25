@@ -338,7 +338,13 @@ ul .number b {
 
 #aleus-banner {
 	background-image: url(herdpicaleus.png);
-	background-position: center right;
+	background-position: 90% center;
+	background-size: cover;
+}
+
+#caspian-banner {
+	background-image: url(herdpicscaspian.png);
+	background-position: center;
 	background-size: cover;
 }
 
