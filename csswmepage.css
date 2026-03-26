@@ -58,7 +58,7 @@ hr.simple {
 
 img.display-image {
 	box-sizing: border-box;
-	width: 450px;
+	width: 500px;
     max-width: 70%;
     height: 470px;
     object-fit: contain;
@@ -325,7 +325,6 @@ ul .number b {
 
 .banner {
 	height: 148px;
-	background-color: seagreen;
 	margin: 10px;
 	border-radius: 4px;
 }
