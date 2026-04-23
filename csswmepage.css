@@ -323,6 +323,10 @@ ul .number b {
 
 /** Herd Pages **/
 
+.herd.container {
+	width: 1010px;
+}
+
 .banner {
 	height: 148px;
 	margin: 10px;
@@ -342,7 +346,13 @@ ul .number b {
 }
 
 #caspian-banner {
-	background-image: url(herdpicscaspian.png);
+	background-image: url(herdpiccaspian.png);
+	background-position: center;
+	background-size: cover;
+}
+
+#bachelor-banner {
+	background-image: url(herdpicbachelors.png);
 	background-position: center;
 	background-size: cover;
 }
